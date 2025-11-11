@@ -1,0 +1,32 @@
+2025-11-10 17:35:06,466 | INFO | [Log] runs/vitb16_full/retrieval/retrieval_2025-11-10_17-35-06.log
+2025-11-10 17:35:06,466 | INFO | ===== Retrieval Configuration =====
+2025-11-10 17:35:06,466 | INFO | img_dir: data/Images
+2025-11-10 17:35:06,466 | INFO | ann: data/test.json
+2025-11-10 17:35:06,466 | INFO | model: ViT-B/16
+2025-11-10 17:35:06,466 | INFO | ckpt: runs/vitb16_full/best.pt
+2025-11-10 17:35:06,466 | INFO | prompt: A photo of {c}
+2025-11-10 17:35:06,466 | INFO | text: None
+2025-11-10 17:35:06,466 | INFO | image: data/Images/2450453051_f1d4a78ab4.jpg
+2025-11-10 17:35:06,466 | INFO | topk: 10
+2025-11-10 17:35:06,466 | INFO | cache_dir: runs/retrieval_cache
+2025-11-10 17:35:06,466 | INFO | batch_size: 128
+2025-11-10 17:35:06,466 | INFO | device: None
+2025-11-10 17:35:06,467 | INFO | out: runs/vitb16_full/retrieval
+2025-11-10 17:35:10,269 | INFO | [LoRA] No LoRA keys found in checkpoint; load as vanilla CLIP.
+2025-11-10 17:35:10,480 | INFO | [Load] Loaded checkpoint: runs/vitb16_full/best.pt
+2025-11-10 17:35:10,485 | INFO | [Cache] Loaded image feats: runs/retrieval_cache/test.json_ViT-B_16_img_feats.npy shape=(1000, 512)
+2025-11-10 17:35:10,488 | INFO | [Cache] Loaded text feats: runs/retrieval_cache/test.json_ViT-B_16_txt_feats.npy shape=(5000, 512)
+2025-11-10 17:35:10,623 | INFO | [Query: Image→Text] data/Images/2450453051_f1d4a78ab4.jpg
+2025-11-10 17:35:10,623 | INFO | Top1: "A photo of A man tossing a Frisbee to his dog that leaps to catch it ."  (owner=3564157681_03a13b7112.jpg)  (score=0.3198)
+2025-11-10 17:35:10,623 | INFO | Top2: "A photo of a black and white dog is catching a Frisbee"  (owner=2896483502_6f807bae9e.jpg)  (score=0.3198)
+2025-11-10 17:35:10,623 | INFO | Top3: "A photo of A black and white dog is catching a Frisbee ."  (owner=2896483502_6f807bae9e.jpg)  (score=0.3185)
+2025-11-10 17:35:10,623 | INFO | Top4: "A photo of A dog leaps over a man in a white cap to catch and orange Frisbee ."  (owner=256283122_a4ef4a17cb.jpg)  (score=0.3168)
+2025-11-10 17:35:10,623 | INFO | Top5: "A photo of A man is watching a dog catch a Frisbee in midair ."  (owner=3564157681_03a13b7112.jpg)  (score=0.3132)
+2025-11-10 17:35:10,623 | INFO | Top6: "A photo of A dog leaps over a man to catch a disc ."  (owner=256283122_a4ef4a17cb.jpg)  (score=0.3110)
+2025-11-10 17:35:10,623 | INFO | Top7: "A photo of A black and white dog catches a Frisbee in midair ."  (owner=460781612_6815c74d37.jpg)  (score=0.3080)
+2025-11-10 17:35:10,623 | INFO | Top8: "A photo of A black and white dog jumps up in the air to catch a Frisbee ."  (owner=460781612_6815c74d37.jpg)  (score=0.3046)
+2025-11-10 17:35:10,624 | INFO | Top9: "A photo of A man stands by as a dog leaps to grab a Frisbee while people sitting on a wall watch ."  (owner=3564157681_03a13b7112.jpg)  (score=0.2939)
+2025-11-10 17:35:10,624 | INFO | Top10: "A photo of A dog catching a Frisbee ."  (owner=2896483502_6f807bae9e.jpg)  (score=0.2931)
+2025-11-10 17:35:10,624 | INFO | [CSV] runs/vitb16_full/retrieval/image2text_results.csv
+2025-11-10 17:35:10,665 | INFO | [VIS] Saved panel to runs/vitb16_full/retrieval/i2t_20251110_173510.jpg
+2025-11-10 17:35:10,801 | INFO | [Done] Retrieval finished.

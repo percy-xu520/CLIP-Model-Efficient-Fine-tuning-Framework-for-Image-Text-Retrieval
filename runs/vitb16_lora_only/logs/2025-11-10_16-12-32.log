@@ -1,0 +1,30 @@
+2025-11-10 16:12:32,704 | INFO | Logging to: runs/vitb16_lora_only/logs/2025-11-10_16-12-32.log
+2025-11-10 16:12:32,705 | INFO | ===== Training Configuration =====
+2025-11-10 16:12:32,705 | INFO | img_dir: data/Images
+2025-11-10 16:12:32,705 | INFO | ann_train: data/train.json
+2025-11-10 16:12:32,705 | INFO | ann_val: data/val.json
+2025-11-10 16:12:32,705 | INFO | ann_test: None
+2025-11-10 16:12:32,705 | INFO | prompt: A photo of {c}
+2025-11-10 16:12:32,705 | INFO | max_captions_per_image: None
+2025-11-10 16:12:32,706 | INFO | model: ViT-B/16
+2025-11-10 16:12:32,706 | INFO | batch_size: 128
+2025-11-10 16:12:32,706 | INFO | epochs: 20
+2025-11-10 16:12:32,706 | INFO | lr: 1e-05
+2025-11-10 16:12:32,706 | INFO | weight_decay: 0.2
+2025-11-10 16:12:32,706 | INFO | warmup_steps: 500
+2025-11-10 16:12:32,706 | INFO | max_grad_norm: 1.0
+2025-11-10 16:12:32,706 | INFO | amp: True
+2025-11-10 16:12:32,706 | INFO | freeze: lora-only
+2025-11-10 16:12:32,706 | INFO | num_workers: 4
+2025-11-10 16:12:32,706 | INFO | log_every: 20
+2025-11-10 16:12:32,706 | INFO | lora: True
+2025-11-10 16:12:32,706 | INFO | lora_r: 8
+2025-11-10 16:12:32,706 | INFO | lora_alpha: 16
+2025-11-10 16:12:32,706 | INFO | lora_dropout: 0.05
+2025-11-10 16:12:32,706 | INFO | lora_train_bias: False
+2025-11-10 16:12:32,707 | INFO | out: runs/vitb16_lora_only
+2025-11-10 16:12:32,707 | INFO | resume: None
+2025-11-10 16:12:32,707 | INFO | eval_every: 1
+2025-11-10 16:12:32,707 | INFO | seed: 42
+2025-11-10 16:12:32,707 | INFO | World size=2, Rank=0, Local rank=0
+2025-11-10 16:12:35,741 | INFO | [LoRA] Injected 72 Linear layers (r=8, alpha=16, dropout=0.05, train_bias=True).

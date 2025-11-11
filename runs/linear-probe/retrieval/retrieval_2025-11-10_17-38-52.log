@@ -1,0 +1,14 @@
+2025-11-10 17:38:52,896 | INFO | [Log] runs/linear-probe/retrieval/retrieval_2025-11-10_17-38-52.log
+2025-11-10 17:38:52,896 | INFO | ===== Retrieval Configuration =====
+2025-11-10 17:38:52,896 | INFO | img_dir: data/Images
+2025-11-10 17:38:52,896 | INFO | ann: data/test.json
+2025-11-10 17:38:52,896 | INFO | model: ViT-B/16
+2025-11-10 17:38:52,896 | INFO | ckpt: runs/linear-probe/best.pt
+2025-11-10 17:38:52,896 | INFO | prompt: A photo of {c}
+2025-11-10 17:38:52,896 | INFO | text: None
+2025-11-10 17:38:52,896 | INFO | image: data/Images/2594459477_8ca0121a9a.jpg
+2025-11-10 17:38:52,896 | INFO | topk: 10
+2025-11-10 17:38:52,896 | INFO | cache_dir: runs/retrieval_cache
+2025-11-10 17:38:52,896 | INFO | batch_size: 128
+2025-11-10 17:38:52,896 | INFO | device: None
+2025-11-10 17:38:52,896 | INFO | out: runs/linear-probe/retrieval

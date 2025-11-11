@@ -1,0 +1,34 @@
+2025-11-10 17:32:45,339 | INFO | [Log] runs/vitb16_full/retrieval/retrieval_2025-11-10_17-32-45.log
+2025-11-10 17:32:45,339 | INFO | ===== Retrieval Configuration =====
+2025-11-10 17:32:45,339 | INFO | img_dir: data/Images
+2025-11-10 17:32:45,339 | INFO | ann: data/test.json
+2025-11-10 17:32:45,339 | INFO | model: ViT-B/16
+2025-11-10 17:32:45,339 | INFO | ckpt: runs/vitb16_full/best.pt
+2025-11-10 17:32:45,339 | INFO | prompt: A photo of {c}
+2025-11-10 17:32:45,339 | INFO | text: None
+2025-11-10 17:32:45,339 | INFO | image: data/Images/127450902_533ceeddfc.jpg
+2025-11-10 17:32:45,339 | INFO | topk: 10
+2025-11-10 17:32:45,339 | INFO | cache_dir: runs/retrieval_cache
+2025-11-10 17:32:45,339 | INFO | batch_size: 128
+2025-11-10 17:32:45,339 | INFO | device: None
+2025-11-10 17:32:45,339 | INFO | out: runs/vitb16_full/retrieval
+2025-11-10 17:32:48,563 | INFO | [LoRA] No LoRA keys found in checkpoint; load as vanilla CLIP.
+2025-11-10 17:32:48,740 | INFO | [Load] Loaded checkpoint: runs/vitb16_full/best.pt
+2025-11-10 17:32:48,745 | INFO | [Encode] Encoding images ...
+2025-11-10 17:32:55,661 | INFO | [Cache] Saved image feats to runs/retrieval_cache/test.json_ViT-B_16_img_feats.npy
+2025-11-10 17:32:55,661 | INFO | [Encode] Encoding texts ...
+2025-11-10 17:32:57,429 | INFO | [Cache] Saved text feats to runs/retrieval_cache/test.json_ViT-B_16_txt_feats.npy
+2025-11-10 17:32:57,459 | INFO | [Query: Image→Text] data/Images/127450902_533ceeddfc.jpg
+2025-11-10 17:32:57,459 | INFO | Top1: "A photo of "People hiking through an icy , hilly landscape .""  (owner=433810429_a4da0eac50.jpg)  (score=0.3293)
+2025-11-10 17:32:57,459 | INFO | Top2: "A photo of Four hikers hike on trail through snow ."  (owner=2467821766_0510c9a2d1.jpg)  (score=0.3272)
+2025-11-10 17:32:57,459 | INFO | Top3: "A photo of Three people walk on a snow covered wasteland ."  (owner=433810429_a4da0eac50.jpg)  (score=0.3110)
+2025-11-10 17:32:57,459 | INFO | Top4: "A photo of Three people walking across an icy hill ."  (owner=433810429_a4da0eac50.jpg)  (score=0.3080)
+2025-11-10 17:32:57,459 | INFO | Top5: "A photo of Three people backpacking across a large snowy and rocky field ."  (owner=433810429_a4da0eac50.jpg)  (score=0.2948)
+2025-11-10 17:32:57,459 | INFO | Top6: "A photo of three men hike in the snow ."  (owner=433810429_a4da0eac50.jpg)  (score=0.2942)
+2025-11-10 17:32:57,459 | INFO | Top7: "A photo of A person is walking up a snowy hill"  (owner=2052953131_30834196fb.jpg)  (score=0.2812)
+2025-11-10 17:32:57,459 | INFO | Top8: "A photo of A group of four hiking through a snowy forest ."  (owner=2467821766_0510c9a2d1.jpg)  (score=0.2803)
+2025-11-10 17:32:57,459 | INFO | Top9: "A photo of A group of people are backpacking through the woods and snow ."  (owner=2467821766_0510c9a2d1.jpg)  (score=0.2748)
+2025-11-10 17:32:57,459 | INFO | Top10: "A photo of People mountain climbing ."  (owner=3502343542_f9b46688e5.jpg)  (score=0.2735)
+2025-11-10 17:32:57,460 | INFO | [CSV] runs/vitb16_full/retrieval/image2text_results.csv
+2025-11-10 17:32:57,510 | INFO | [VIS] Saved panel to runs/vitb16_full/retrieval/i2t_20251110_173257.jpg
+2025-11-10 17:32:57,647 | INFO | [Done] Retrieval finished.

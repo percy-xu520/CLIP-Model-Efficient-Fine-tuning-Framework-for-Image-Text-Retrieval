@@ -1,0 +1,94 @@
+pip install --upgrade pip
+pip install ftfy regex tqdm pillow numpy
+pip install git+https://github.com/openai/CLIP.git
+
+文本塔微调（text-only fine-tune）
+只更新文本编码器部分（图像编码器冻结）
+torchrun --nproc_per_node=2 CLIP_STF.py \
+  --img_dir data/Images \
+  --ann_train data/train.json \
+  --ann_val data/val.json \
+  --model ViT-B/16 \
+  --batch_size 128 \
+  --epochs 5 \
+  --lr 1e-5 \
+  --amp \
+  --freeze text-only \
+  --prompt "A photo of {c}" \
+  --out runs/vitb16_text_only
+
+全参数微调（full fine-tune）
+同时训练图像塔 + 文本塔（最耗显存，但最灵活）
+torchrun --nproc_per_node=2 CLIP_STF.py \
+  --img_dir data/Images \
+  --ann_train data/train.json \
+  --ann_val data/val.json \
+  --model ViT-B/16 \
+  --batch_size 64 \
+  --epochs 20 \
+  --lr 5e-6 \
+  --amp \
+  --freeze full \
+  --prompt "A photo of {c}" \
+  --out runs/vitb16_full
+
+LoRA 微调（轻量化参数高效微调）
+冻结主干，只训练 LoRA 模块（r、alpha 可调）
+torchrun --nproc_per_node=2 CLIP_STF.py \
+  --img_dir data/Images \
+  --ann_train data/train.json \
+  --ann_val data/val.json \
+  --model ViT-B/16 \
+  --batch_size 128 \
+  --epochs 20 \
+  --lr 1e-5 \
+  --amp \
+  --lora \
+  --freeze lora-only \
+  --lora_r 8 \
+  --lora_alpha 16 \
+  --lora_dropout 0.05 \
+  --prompt "A photo of {c}" \
+  --out runs/vitb16_lora_only
+
+
+//线性探针（linear probe）
+冻结所有预训练权重，只训练最后投影层（通常 text_projection）
+torchrun --nproc_per_node=2 CLIP_STF.py \
+  --img_dir data/Images \
+  --ann_train data/train.json \
+  --ann_val data/val.json \
+  --model ViT-B/16 \
+  --batch_size 256 \
+  --epochs 3 \
+  --lr 1e-4 \
+  --amp \
+  --freeze linear-probe \
+  --prompt "A photo of {c}" \
+  --out runs/vitb16_linear_probe
+文本 → 图片 检索
+python clip_retrieval_best.py \
+  --img_dir data/Images \
+  --ann data/test.json \
+  --model ViT-B/16 \
+  --ckpt runs/vitb16_linear_probe/best.pt \
+  --text "a red car" \
+  --topk 5 \
+  --out runs/vitb16_linear_probe/retrieval
+图片 → 文本 检索
+python clip_retrieval_best.py \
+  --img_dir data/Images \
+  --ann data/test.json \
+  --model ViT-B/16 \
+  --ckpt runs/vitb16_linear_probe/best.pt \
+  --image data/Images/2594459477_8ca0121a9a.jpg \
+  --topk 10 \
+  --out runs/vitb16_linear_probe/retrieval
+评估
+torchrun --nproc_per_node=2 clip_eval_best.py \
+  --img_dir data/Images \
+  --ann_test data/test.json \
+  --model ViT-B/16 \
+  --ckpt runs/vitb16_text_lora/best.pt \
+  --prompt "A photo of {c}" \
+  --out runs/vitb16_text_lora/eval

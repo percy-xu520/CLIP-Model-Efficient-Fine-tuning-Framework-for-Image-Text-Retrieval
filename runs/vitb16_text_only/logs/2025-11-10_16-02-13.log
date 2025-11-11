@@ -1,0 +1,118 @@
+2025-11-10 16:02:13,552 | INFO | Logging to: runs/vitb16_text_only/logs/2025-11-10_16-02-13.log
+2025-11-10 16:02:13,553 | INFO | ===== Training Configuration =====
+2025-11-10 16:02:13,553 | INFO | img_dir: data/Images
+2025-11-10 16:02:13,553 | INFO | ann_train: data/train.json
+2025-11-10 16:02:13,553 | INFO | ann_val: data/val.json
+2025-11-10 16:02:13,553 | INFO | ann_test: None
+2025-11-10 16:02:13,553 | INFO | prompt: A photo of {c}
+2025-11-10 16:02:13,554 | INFO | max_captions_per_image: None
+2025-11-10 16:02:13,554 | INFO | model: ViT-B/16
+2025-11-10 16:02:13,554 | INFO | batch_size: 128
+2025-11-10 16:02:13,554 | INFO | epochs: 20
+2025-11-10 16:02:13,554 | INFO | lr: 1e-05
+2025-11-10 16:02:13,554 | INFO | weight_decay: 0.2
+2025-11-10 16:02:13,554 | INFO | warmup_steps: 500
+2025-11-10 16:02:13,554 | INFO | max_grad_norm: 1.0
+2025-11-10 16:02:13,554 | INFO | amp: True
+2025-11-10 16:02:13,554 | INFO | freeze: text-only
+2025-11-10 16:02:13,554 | INFO | num_workers: 4
+2025-11-10 16:02:13,554 | INFO | log_every: 20
+2025-11-10 16:02:13,554 | INFO | lora: False
+2025-11-10 16:02:13,554 | INFO | lora_r: 8
+2025-11-10 16:02:13,554 | INFO | lora_alpha: 16
+2025-11-10 16:02:13,554 | INFO | lora_dropout: 0.0
+2025-11-10 16:02:13,554 | INFO | lora_train_bias: False
+2025-11-10 16:02:13,555 | INFO | out: runs/vitb16_text_only
+2025-11-10 16:02:13,555 | INFO | resume: None
+2025-11-10 16:02:13,555 | INFO | eval_every: 1
+2025-11-10 16:02:13,555 | INFO | seed: 42
+2025-11-10 16:02:13,555 | INFO | World size=2, Rank=0, Local rank=0
+2025-11-10 16:02:22,073 | INFO | [epoch 0] step 20/23  loss=0.6211  lr=3.80e-07  dt=5.1s
+2025-11-10 16:02:23,873 | INFO | [ckpt] saved to runs/vitb16_text_only/ckpt_epoch0.pt
+2025-11-10 16:02:27,406 | INFO | [val@epoch1] t2i@1=0.596  i2t@1=0.764  t2i@5=0.841  i2t@5=0.925  t2i@10=0.914  i2t@10=0.972
+2025-11-10 16:02:28,570 | INFO | [ckpt] saved to runs/vitb16_text_only/best.pt
+2025-11-10 16:02:28,570 | INFO | [best] epoch=0  score=0.6798  -> saved best.pt
+2025-11-10 16:02:32,484 | INFO | [epoch 1] step 20/23  loss=0.5336  lr=8.40e-07  dt=3.9s
+2025-11-10 16:02:34,272 | INFO | [ckpt] saved to runs/vitb16_text_only/ckpt_epoch1.pt
+2025-11-10 16:02:37,498 | INFO | [val@epoch2] t2i@1=0.621  i2t@1=0.783  t2i@5=0.865  i2t@5=0.934  t2i@10=0.928  i2t@10=0.971
+2025-11-10 16:02:40,243 | INFO | [ckpt] saved to runs/vitb16_text_only/best.pt
+2025-11-10 16:02:40,243 | INFO | [best] epoch=1  score=0.7021  -> saved best.pt
+2025-11-10 16:02:44,165 | INFO | [epoch 2] step 20/23  loss=0.5101  lr=1.30e-06  dt=3.9s
+2025-11-10 16:02:46,014 | INFO | [ckpt] saved to runs/vitb16_text_only/ckpt_epoch2.pt
+2025-11-10 16:02:49,265 | INFO | [val@epoch3] t2i@1=0.641  i2t@1=0.780  t2i@5=0.883  i2t@5=0.940  t2i@10=0.941  i2t@10=0.974
+2025-11-10 16:02:52,095 | INFO | [ckpt] saved to runs/vitb16_text_only/best.pt
+2025-11-10 16:02:52,095 | INFO | [best] epoch=2  score=0.7107  -> saved best.pt
+2025-11-10 16:02:55,869 | INFO | [epoch 3] step 20/23  loss=0.3372  lr=1.76e-06  dt=3.8s
+2025-11-10 16:02:57,666 | INFO | [ckpt] saved to runs/vitb16_text_only/ckpt_epoch3.pt
+2025-11-10 16:03:00,979 | INFO | [val@epoch4] t2i@1=0.656  i2t@1=0.798  t2i@5=0.894  i2t@5=0.941  t2i@10=0.947  i2t@10=0.976
+2025-11-10 16:03:03,711 | INFO | [ckpt] saved to runs/vitb16_text_only/best.pt
+2025-11-10 16:03:03,711 | INFO | [best] epoch=3  score=0.7270  -> saved best.pt
+2025-11-10 16:03:08,065 | INFO | [epoch 4] step 20/23  loss=0.2284  lr=2.22e-06  dt=4.2s
+2025-11-10 16:03:09,721 | INFO | [ckpt] saved to runs/vitb16_text_only/ckpt_epoch4.pt
+2025-11-10 16:03:12,917 | INFO | [val@epoch5] t2i@1=0.662  i2t@1=0.796  t2i@5=0.900  i2t@5=0.947  t2i@10=0.952  i2t@10=0.980
+2025-11-10 16:03:16,390 | INFO | [ckpt] saved to runs/vitb16_text_only/best.pt
+2025-11-10 16:03:16,391 | INFO | [best] epoch=4  score=0.7292  -> saved best.pt
+2025-11-10 16:03:20,329 | INFO | [epoch 5] step 20/23  loss=0.3089  lr=2.68e-06  dt=3.9s
+2025-11-10 16:03:22,127 | INFO | [ckpt] saved to runs/vitb16_text_only/ckpt_epoch5.pt
+2025-11-10 16:03:25,346 | INFO | [val@epoch6] t2i@1=0.667  i2t@1=0.799  t2i@5=0.903  i2t@5=0.954  t2i@10=0.956  i2t@10=0.982
+2025-11-10 16:03:29,165 | INFO | [ckpt] saved to runs/vitb16_text_only/best.pt
+2025-11-10 16:03:29,166 | INFO | [best] epoch=5  score=0.7328  -> saved best.pt
+2025-11-10 16:03:32,988 | INFO | [epoch 6] step 20/23  loss=0.2921  lr=3.14e-06  dt=3.8s
+2025-11-10 16:03:34,763 | INFO | [ckpt] saved to runs/vitb16_text_only/ckpt_epoch6.pt
+2025-11-10 16:03:37,943 | INFO | [val@epoch7] t2i@1=0.672  i2t@1=0.800  t2i@5=0.906  i2t@5=0.958  t2i@10=0.957  i2t@10=0.979
+2025-11-10 16:03:41,205 | INFO | [ckpt] saved to runs/vitb16_text_only/best.pt
+2025-11-10 16:03:41,206 | INFO | [best] epoch=6  score=0.7360  -> saved best.pt
+2025-11-10 16:03:45,131 | INFO | [epoch 7] step 20/23  loss=0.2626  lr=3.60e-06  dt=3.9s
+2025-11-10 16:03:46,785 | INFO | [ckpt] saved to runs/vitb16_text_only/ckpt_epoch7.pt
+2025-11-10 16:03:50,054 | INFO | [val@epoch8] t2i@1=0.676  i2t@1=0.804  t2i@5=0.909  i2t@5=0.962  t2i@10=0.957  i2t@10=0.981
+2025-11-10 16:03:53,598 | INFO | [ckpt] saved to runs/vitb16_text_only/best.pt
+2025-11-10 16:03:53,599 | INFO | [best] epoch=7  score=0.7402  -> saved best.pt
+2025-11-10 16:03:57,725 | INFO | [epoch 8] step 20/23  loss=0.3110  lr=4.06e-06  dt=4.1s
+2025-11-10 16:03:59,515 | INFO | [ckpt] saved to runs/vitb16_text_only/ckpt_epoch8.pt
+2025-11-10 16:04:02,787 | INFO | [val@epoch9] t2i@1=0.675  i2t@1=0.804  t2i@5=0.913  i2t@5=0.960  t2i@10=0.959  i2t@10=0.983
+2025-11-10 16:04:06,824 | INFO | [epoch 9] step 20/23  loss=0.3742  lr=4.52e-06  dt=4.0s
+2025-11-10 16:04:08,679 | INFO | [ckpt] saved to runs/vitb16_text_only/ckpt_epoch9.pt
+2025-11-10 16:04:12,005 | INFO | [val@epoch10] t2i@1=0.681  i2t@1=0.804  t2i@5=0.914  i2t@5=0.961  t2i@10=0.960  i2t@10=0.984
+2025-11-10 16:04:14,934 | INFO | [ckpt] saved to runs/vitb16_text_only/best.pt
+2025-11-10 16:04:14,935 | INFO | [best] epoch=9  score=0.7426  -> saved best.pt
+2025-11-10 16:04:19,014 | INFO | [epoch 10] step 20/23  loss=0.2563  lr=4.98e-06  dt=4.1s
+2025-11-10 16:04:20,879 | INFO | [ckpt] saved to runs/vitb16_text_only/ckpt_epoch10.pt
+2025-11-10 16:04:24,121 | INFO | [val@epoch11] t2i@1=0.682  i2t@1=0.813  t2i@5=0.913  i2t@5=0.964  t2i@10=0.961  i2t@10=0.987
+2025-11-10 16:04:26,419 | INFO | [ckpt] saved to runs/vitb16_text_only/best.pt
+2025-11-10 16:04:26,419 | INFO | [best] epoch=10  score=0.7474  -> saved best.pt
+2025-11-10 16:04:30,399 | INFO | [epoch 11] step 20/23  loss=0.1828  lr=5.44e-06  dt=4.0s
+2025-11-10 16:04:32,205 | INFO | [ckpt] saved to runs/vitb16_text_only/ckpt_epoch11.pt
+2025-11-10 16:04:35,459 | INFO | [val@epoch12] t2i@1=0.685  i2t@1=0.800  t2i@5=0.915  i2t@5=0.967  t2i@10=0.961  i2t@10=0.990
+2025-11-10 16:04:39,477 | INFO | [epoch 12] step 20/23  loss=0.2654  lr=5.90e-06  dt=4.0s
+2025-11-10 16:04:41,298 | INFO | [ckpt] saved to runs/vitb16_text_only/ckpt_epoch12.pt
+2025-11-10 16:04:44,524 | INFO | [val@epoch13] t2i@1=0.685  i2t@1=0.807  t2i@5=0.916  i2t@5=0.961  t2i@10=0.959  i2t@10=0.988
+2025-11-10 16:04:48,590 | INFO | [epoch 13] step 20/23  loss=0.2573  lr=6.36e-06  dt=4.1s
+2025-11-10 16:04:50,372 | INFO | [ckpt] saved to runs/vitb16_text_only/ckpt_epoch13.pt
+2025-11-10 16:04:53,669 | INFO | [val@epoch14] t2i@1=0.683  i2t@1=0.802  t2i@5=0.914  i2t@5=0.968  t2i@10=0.960  i2t@10=0.988
+2025-11-10 16:04:57,835 | INFO | [epoch 14] step 20/23  loss=0.2053  lr=6.82e-06  dt=4.1s
+2025-11-10 16:04:59,681 | INFO | [ckpt] saved to runs/vitb16_text_only/ckpt_epoch14.pt
+2025-11-10 16:05:02,913 | INFO | [val@epoch15] t2i@1=0.688  i2t@1=0.814  t2i@5=0.913  i2t@5=0.963  t2i@10=0.959  i2t@10=0.984
+2025-11-10 16:05:07,364 | INFO | [ckpt] saved to runs/vitb16_text_only/best.pt
+2025-11-10 16:05:07,365 | INFO | [best] epoch=14  score=0.7509  -> saved best.pt
+2025-11-10 16:05:11,513 | INFO | [epoch 15] step 20/23  loss=0.1846  lr=7.28e-06  dt=4.1s
+2025-11-10 16:05:13,206 | INFO | [ckpt] saved to runs/vitb16_text_only/ckpt_epoch15.pt
+2025-11-10 16:05:16,469 | INFO | [val@epoch16] t2i@1=0.687  i2t@1=0.794  t2i@5=0.915  i2t@5=0.965  t2i@10=0.957  i2t@10=0.984
+2025-11-10 16:05:20,629 | INFO | [epoch 16] step 20/23  loss=0.1954  lr=7.74e-06  dt=4.2s
+2025-11-10 16:05:22,512 | INFO | [ckpt] saved to runs/vitb16_text_only/ckpt_epoch16.pt
+2025-11-10 16:05:25,816 | INFO | [val@epoch17] t2i@1=0.687  i2t@1=0.796  t2i@5=0.914  i2t@5=0.963  t2i@10=0.959  i2t@10=0.988
+2025-11-10 16:05:29,968 | INFO | [epoch 17] step 20/23  loss=0.1747  lr=8.20e-06  dt=4.2s
+2025-11-10 16:05:31,816 | INFO | [ckpt] saved to runs/vitb16_text_only/ckpt_epoch17.pt
+2025-11-10 16:05:35,088 | INFO | [val@epoch18] t2i@1=0.686  i2t@1=0.800  t2i@5=0.912  i2t@5=0.963  t2i@10=0.957  i2t@10=0.990
+2025-11-10 16:05:39,212 | INFO | [epoch 18] step 20/23  loss=0.1873  lr=8.66e-06  dt=4.1s
+2025-11-10 16:05:40,942 | INFO | [ckpt] saved to runs/vitb16_text_only/ckpt_epoch18.pt
+2025-11-10 16:05:44,180 | INFO | [val@epoch19] t2i@1=0.687  i2t@1=0.809  t2i@5=0.912  i2t@5=0.968  t2i@10=0.956  i2t@10=0.992
+2025-11-10 16:05:48,364 | INFO | [epoch 19] step 20/23  loss=0.1350  lr=9.12e-06  dt=4.1s
+2025-11-10 16:05:50,151 | INFO | [ckpt] saved to runs/vitb16_text_only/ckpt_epoch19.pt
+2025-11-10 16:05:53,424 | INFO | [val@epoch20] t2i@1=0.672  i2t@1=0.796  t2i@5=0.911  i2t@5=0.963  t2i@10=0.957  i2t@10=0.987
+2025-11-10 16:05:56,699 | INFO | [val_final] t2i@1=0.672  i2t@1=0.796  t2i@5=0.911  i2t@5=0.963  t2i@10=0.957  i2t@10=0.987
+2025-11-10 16:05:56,699 | INFO | ===== Training Complete =====
+2025-11-10 16:05:56,699 | INFO | Total time: 0:03:39.756202
+2025-11-10 16:05:56,700 | INFO | Best epoch: 14, best score: 0.7509
+2025-11-10 16:05:56,700 | INFO | Logs saved to: runs/vitb16_text_only/logs/2025-11-10_16-02-13.log
+2025-11-10 16:05:56,700 | INFO | CSV saved to:  runs/vitb16_text_only/logs/2025-11-10_16-02-13.csv
+2025-11-10 16:05:56,700 | INFO | Checkpoints dir: runs/vitb16_text_only

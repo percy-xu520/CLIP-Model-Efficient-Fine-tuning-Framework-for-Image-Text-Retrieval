@@ -1,0 +1,27 @@
+2025-11-10 17:37:37,064 | INFO | [Log] runs/vitb16_full/retrieval/retrieval_2025-11-10_17-37-37.log
+2025-11-10 17:37:37,064 | INFO | ===== Retrieval Configuration =====
+2025-11-10 17:37:37,064 | INFO | img_dir: data/Images
+2025-11-10 17:37:37,064 | INFO | ann: data/test.json
+2025-11-10 17:37:37,064 | INFO | model: ViT-B/16
+2025-11-10 17:37:37,064 | INFO | ckpt: runs/vitb16_full/best.pt
+2025-11-10 17:37:37,064 | INFO | prompt: A photo of {c}
+2025-11-10 17:37:37,064 | INFO | text: a red car parked on the street
+2025-11-10 17:37:37,064 | INFO | image: None
+2025-11-10 17:37:37,064 | INFO | topk: 5
+2025-11-10 17:37:37,064 | INFO | cache_dir: runs/retrieval_cache
+2025-11-10 17:37:37,064 | INFO | batch_size: 128
+2025-11-10 17:37:37,064 | INFO | device: None
+2025-11-10 17:37:37,064 | INFO | out: runs/vitb16_full/retrieval
+2025-11-10 17:37:40,287 | INFO | [LoRA] No LoRA keys found in checkpoint; load as vanilla CLIP.
+2025-11-10 17:37:40,467 | INFO | [Load] Loaded checkpoint: runs/vitb16_full/best.pt
+2025-11-10 17:37:40,471 | INFO | [Cache] Loaded image feats: runs/retrieval_cache/test.json_ViT-B_16_img_feats.npy shape=(1000, 512)
+2025-11-10 17:37:40,473 | INFO | [Cache] Loaded text feats: runs/retrieval_cache/test.json_ViT-B_16_txt_feats.npy shape=(5000, 512)
+2025-11-10 17:37:40,570 | INFO | [Query: Text→Image] "a red car parked on the street"
+2025-11-10 17:37:40,571 | INFO | Top1: data/Images/1260816604_570fc35836.jpg  (score=0.2792)
+2025-11-10 17:37:40,571 | INFO | Top2: data/Images/2828583747_8cfb7217af.jpg  (score=0.2626)
+2025-11-10 17:37:40,571 | INFO | Top3: data/Images/2092870249_90e3f1855b.jpg  (score=0.2602)
+2025-11-10 17:37:40,571 | INFO | Top4: data/Images/267015208_d80b3eb94d.jpg  (score=0.2491)
+2025-11-10 17:37:40,571 | INFO | Top5: data/Images/791338571_7f38510bf7.jpg  (score=0.2361)
+2025-11-10 17:37:40,571 | INFO | [CSV] runs/vitb16_full/retrieval/text2image_results.csv
+2025-11-10 17:37:40,681 | INFO | [VIS] Saved Top-5 grid to runs/vitb16_full/retrieval/t2i_20251110_173740.jpg
+2025-11-10 17:37:40,814 | INFO | [Done] Retrieval finished.

@@ -1,0 +1,32 @@
+2025-11-10 17:36:11,167 | INFO | [Log] runs/vitb16_full/retrieval/retrieval_2025-11-10_17-36-11.log
+2025-11-10 17:36:11,167 | INFO | ===== Retrieval Configuration =====
+2025-11-10 17:36:11,167 | INFO | img_dir: data/Images
+2025-11-10 17:36:11,167 | INFO | ann: data/test.json
+2025-11-10 17:36:11,167 | INFO | model: ViT-B/16
+2025-11-10 17:36:11,167 | INFO | ckpt: runs/vitb16_full/best.pt
+2025-11-10 17:36:11,168 | INFO | prompt: A photo of {c}
+2025-11-10 17:36:11,168 | INFO | text: None
+2025-11-10 17:36:11,168 | INFO | image: data/Images/2594459477_8ca0121a9a.jpg
+2025-11-10 17:36:11,168 | INFO | topk: 10
+2025-11-10 17:36:11,168 | INFO | cache_dir: runs/retrieval_cache
+2025-11-10 17:36:11,168 | INFO | batch_size: 128
+2025-11-10 17:36:11,168 | INFO | device: None
+2025-11-10 17:36:11,168 | INFO | out: runs/vitb16_full/retrieval
+2025-11-10 17:36:14,868 | INFO | [LoRA] No LoRA keys found in checkpoint; load as vanilla CLIP.
+2025-11-10 17:36:15,053 | INFO | [Load] Loaded checkpoint: runs/vitb16_full/best.pt
+2025-11-10 17:36:15,057 | INFO | [Cache] Loaded image feats: runs/retrieval_cache/test.json_ViT-B_16_img_feats.npy shape=(1000, 512)
+2025-11-10 17:36:15,059 | INFO | [Cache] Loaded text feats: runs/retrieval_cache/test.json_ViT-B_16_txt_feats.npy shape=(5000, 512)
+2025-11-10 17:36:15,182 | INFO | [Query: Image→Text] data/Images/2594459477_8ca0121a9a.jpg
+2025-11-10 17:36:15,183 | INFO | Top1: "A photo of An older girl and a younger girl playing barefoot in a puddle"  (owner=2706430695_3b5667741c.jpg)  (score=0.2930)
+2025-11-10 17:36:15,183 | INFO | Top2: "A photo of A girl throws stones and watches the lake splash ."  (owner=3737711435_113ccd0a52.jpg)  (score=0.2846)
+2025-11-10 17:36:15,183 | INFO | Top3: "A photo of A young girl plays in fountain water ."  (owner=3484649669_7bfe62080b.jpg)  (score=0.2835)
+2025-11-10 17:36:15,183 | INFO | Top4: "A photo of "A little girl in a swimsuit and braids is in front of the water , in the grass , with her arms crossed in front of her chest""  (owner=862054277_34b5a6f401.jpg)  (score=0.2806)
+2025-11-10 17:36:15,183 | INFO | Top5: "A photo of A girl walking on a beach barefoot ."  (owner=2527303359_6c3dc3f282.jpg)  (score=0.2777)
+2025-11-10 17:36:15,183 | INFO | Top6: "A photo of Two girls in denim shorts stand in a puddle of water ."  (owner=2706430695_3b5667741c.jpg)  (score=0.2742)
+2025-11-10 17:36:15,183 | INFO | Top7: "A photo of A young girl is playing in a fountain of water ."  (owner=3484649669_7bfe62080b.jpg)  (score=0.2734)
+2025-11-10 17:36:15,183 | INFO | Top8: "A photo of A girl in a sandy area ."  (owner=1412832223_99e8b4701a.jpg)  (score=0.2733)
+2025-11-10 17:36:15,183 | INFO | Top9: "A photo of A girl in a white dress walks toward the water and away from white boots on a beach ."  (owner=2527303359_6c3dc3f282.jpg)  (score=0.2706)
+2025-11-10 17:36:15,183 | INFO | Top10: "A photo of A girl in water-wear has skipped a stone off an enclosed body of water ."  (owner=3737711435_113ccd0a52.jpg)  (score=0.2677)
+2025-11-10 17:36:15,183 | INFO | [CSV] runs/vitb16_full/retrieval/image2text_results.csv
+2025-11-10 17:36:15,235 | INFO | [VIS] Saved panel to runs/vitb16_full/retrieval/i2t_20251110_173615.jpg
+2025-11-10 17:36:15,364 | INFO | [Done] Retrieval finished.

@@ -1,0 +1,6 @@
+time,query,rank,image_path,score
+20251110_173740,a red car parked on the street,1,data/Images/1260816604_570fc35836.jpg,0.2792031764984131
+20251110_173740,a red car parked on the street,2,data/Images/2828583747_8cfb7217af.jpg,0.26255184412002563
+20251110_173740,a red car parked on the street,3,data/Images/2092870249_90e3f1855b.jpg,0.2601718306541443
+20251110_173740,a red car parked on the street,4,data/Images/267015208_d80b3eb94d.jpg,0.24913808703422546
+20251110_173740,a red car parked on the street,5,data/Images/791338571_7f38510bf7.jpg,0.2361471951007843

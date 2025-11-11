@@ -1,0 +1,32 @@
+2025-11-10 17:39:31,571 | INFO | [Log] runs/vitb16_linear_probe/retrieval/retrieval_2025-11-10_17-39-31.log
+2025-11-10 17:39:31,571 | INFO | ===== Retrieval Configuration =====
+2025-11-10 17:39:31,571 | INFO | img_dir: data/Images
+2025-11-10 17:39:31,571 | INFO | ann: data/test.json
+2025-11-10 17:39:31,571 | INFO | model: ViT-B/16
+2025-11-10 17:39:31,571 | INFO | ckpt: runs/vitb16_linear_probe/best.pt
+2025-11-10 17:39:31,571 | INFO | prompt: A photo of {c}
+2025-11-10 17:39:31,571 | INFO | text: None
+2025-11-10 17:39:31,571 | INFO | image: data/Images/2594459477_8ca0121a9a.jpg
+2025-11-10 17:39:31,571 | INFO | topk: 10
+2025-11-10 17:39:31,571 | INFO | cache_dir: runs/retrieval_cache
+2025-11-10 17:39:31,571 | INFO | batch_size: 128
+2025-11-10 17:39:31,571 | INFO | device: None
+2025-11-10 17:39:31,571 | INFO | out: runs/vitb16_linear_probe/retrieval
+2025-11-10 17:39:34,366 | INFO | [LoRA] No LoRA keys found in checkpoint; load as vanilla CLIP.
+2025-11-10 17:39:34,555 | INFO | [Load] Loaded checkpoint: runs/vitb16_linear_probe/best.pt
+2025-11-10 17:39:34,560 | INFO | [Cache] Loaded image feats: runs/retrieval_cache/test.json_ViT-B_16_img_feats.npy shape=(1000, 512)
+2025-11-10 17:39:34,561 | INFO | [Cache] Loaded text feats: runs/retrieval_cache/test.json_ViT-B_16_txt_feats.npy shape=(5000, 512)
+2025-11-10 17:39:34,732 | INFO | [Query: Image→Text] data/Images/2594459477_8ca0121a9a.jpg
+2025-11-10 17:39:34,733 | INFO | Top1: "A photo of An older girl and a younger girl playing barefoot in a puddle"  (owner=2706430695_3b5667741c.jpg)  (score=0.3158)
+2025-11-10 17:39:34,733 | INFO | Top2: "A photo of Two girls stand in a puddle on a sidewalk ."  (owner=2706430695_3b5667741c.jpg)  (score=0.2998)
+2025-11-10 17:39:34,733 | INFO | Top3: "A photo of Two girls in denim shorts stand in a puddle of water ."  (owner=2706430695_3b5667741c.jpg)  (score=0.2779)
+2025-11-10 17:39:34,733 | INFO | Top4: "A photo of A young girl plays in fountain water ."  (owner=3484649669_7bfe62080b.jpg)  (score=0.2777)
+2025-11-10 17:39:34,733 | INFO | Top5: "A photo of A young girl is playing in a fountain of water ."  (owner=3484649669_7bfe62080b.jpg)  (score=0.2740)
+2025-11-10 17:39:34,733 | INFO | Top6: "A photo of A child is sitting on the grass by a concrete storm drain ."  (owner=2432709509_2a4d0c833f.jpg)  (score=0.2685)
+2025-11-10 17:39:34,733 | INFO | Top7: "A photo of A girl throws stones and watches the lake splash ."  (owner=3737711435_113ccd0a52.jpg)  (score=0.2668)
+2025-11-10 17:39:34,733 | INFO | Top8: "A photo of Young woman in a city park near a water feature ."  (owner=159712188_d530dd478c.jpg)  (score=0.2662)
+2025-11-10 17:39:34,733 | INFO | Top9: "A photo of Little girl crouches to splash fountain water ."  (owner=3484649669_7bfe62080b.jpg)  (score=0.2651)
+2025-11-10 17:39:34,733 | INFO | Top10: "A photo of A girl stands in a driveway ."  (owner=2824004868_1fc0a81173.jpg)  (score=0.2610)
+2025-11-10 17:39:34,733 | INFO | [CSV] runs/vitb16_linear_probe/retrieval/image2text_results.csv
+2025-11-10 17:39:34,789 | INFO | [VIS] Saved panel to runs/vitb16_linear_probe/retrieval/i2t_20251110_173934.jpg
+2025-11-10 17:39:34,917 | INFO | [Done] Retrieval finished.

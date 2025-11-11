@@ -1,0 +1,12 @@
+torchrun --nproc_per_node=2 CLIP_STF.py \
+  --img_dir data/Images \
+  --ann_train data/train.json \
+  --ann_val data/val.json \
+  --model ViT-B/16 \
+  --batch_size 128 \
+  --epochs 20 \
+  --lr 1e-5 \
+  --amp \
+  --freeze text-only \
+  --prompt "A clear visual representation of {c}, focus on key features" \
+  --out runs/vitb16_text_only
